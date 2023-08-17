@@ -1,14 +1,6 @@
-# Blink Example
+# Smart Home Project with BMP280 sensor, Relay, Led and MQTT
 
-(See the README.md file in the upper level 'examples' directory for more information about examples.)
-
-This example demonstrates how to blink a LED using GPIO or RMT for the addressable LED, i.e. [WS2812](http://www.world-semi.com/Certifications/WS2812B.html).
-
-See the RMT examples in the [RMT Peripheral](../../peripherals/rmt) for more information about how to use it.
-
-## How to Use Example
-
-Before project configuration and build, be sure to set the correct chip target using `idf.py set-target <chip_name>`.
+With project allows get pressure, temperature, humidity from sensor and transmit to MQTT server by the external event from broker. Also you can also publish an event for switching an external relay via GPIO.
 
 ### Hardware Required
 
@@ -47,27 +39,6 @@ Run `idf.py -p PORT flash monitor` to build, flash and monitor the project.
 (To exit the serial monitor, type ``Ctrl-]``.)
 
 See the [Getting Started Guide](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html) for full steps to configure and use ESP-IDF to build projects.
-
-## Example Output
-
-As you run the example, you will see the LED blinking, according to the previously defined period. For the addressable LED, you can also change the LED color by setting the `pStrip_a->set_pixel(pStrip_a, 0, 16, 16, 16);` (LED Strip, Pixel Number, Red, Green, Blue) with values from 0 to 255 in the `blink.c` file.
-
-```
-I (315) example: Example configured to blink addressable LED!
-I (325) example: Turning the LED OFF!
-I (1325) example: Turning the LED ON!
-I (2325) example: Turning the LED OFF!
-I (3325) example: Turning the LED ON!
-I (4325) example: Turning the LED OFF!
-I (5325) example: Turning the LED ON!
-I (6325) example: Turning the LED OFF!
-I (7325) example: Turning the LED ON!
-I (8325) example: Turning the LED OFF!
-```
-
-Note: The color order could be different according to the LED model.
-
-The pixel number indicates the pixel position in the LED strip. For a single LED, use 0.
 
 ## Troubleshooting
 
