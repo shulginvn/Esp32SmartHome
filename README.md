@@ -1,4 +1,4 @@
-# Smart Home Project with BMP280 sensor, Relay, Led and MQTT
+# Smart Home Project with use BMP280 sensor and MQTT protocol for communication with Broker
 
 With project allows get pressure, temperature, humidity from sensor and transmit to MQTT server by the external event from broker. Also you can also publish an event for switching an external relay via GPIO.
 
